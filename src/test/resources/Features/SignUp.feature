@@ -18,17 +18,18 @@
 #Sample Feature Definition Template
 
 Feature: Testing Facebook SignUp 
-  This Feature is to test different scenarios with respect to signing up in to Facebook.
+	This Feature is to test different scenarios with respect to signing up in to Facebook.
   
-  Background:
-  	Given user navigates to Facebook homepage
-
-  @Positive
-  Scenario: Creating a new Facebook account with valid details
-  	Given user enters the Firstname and Surname
-    And keys in valid email address
-    And enters a valid password
-    Then keys in DOB as "Date", "Month", "Year"
-    ###Assumption - DOB is made to select in random in code###Negative cases can be added accordingly 
-    Then selects the Sex as "feMale"
-    #And clicks on the signup button
+Background: 
+	Given user navigates to Facebook homepage
+	
+@Positive 
+Scenario: Creating a new Facebook account with valid details 
+	Given user enters the Firstname and Surname 
+	And keys in valid email address 
+	Then confirm the email address 
+	And enters a valid password
+	Then keys in DOB as "Date", "Month", "Year"
+	###Assumption - DOB is made to select in random in code###Negative cases can be added accordingly 
+	Then selects the Sex as "Male"
+	And clicks on the signup button
