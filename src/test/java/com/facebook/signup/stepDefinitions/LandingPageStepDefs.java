@@ -64,11 +64,11 @@ public class LandingPageStepDefs {
 		driver.get("https://www.facebook.com");
 		PageFactory.initElements(driver, lPage);
 	}
-
-	@Given("^user enters the Firstname and Surname$")
-	public void user_enters_the_Firstname_and_Surname() throws Throwable {
-		lPage.enterFirstName("John");
-		lPage.enterSurName("Snow");
+	
+	@Given("^user enters Firstname as \"([^\"]*)\" and Surname as \"([^\"]*)\"$")
+	public void user_enters_Firstname_as_and_Surname_as(String fname, String sname) throws Throwable {
+		lPage.enterFirstName(fname);
+		lPage.enterSurName(sname);
 	}
 
 	@Given("^keys in valid email address$")

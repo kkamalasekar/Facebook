@@ -25,7 +25,7 @@ Background:
 	
 @Positive 
 Scenario: Creating a new Facebook account with valid details 
-	Given user enters the Firstname and Surname 
+	Given user enters Firstname as "John" and Surname as "Snow" 
 	And keys in valid email address 
 	Then confirm the email address 
 	And enters a valid password
